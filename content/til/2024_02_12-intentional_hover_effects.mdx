@@ -1,0 +1,32 @@
+---
+title: 'Intentional Hover Effects'
+description: 'Create intentional hover effects with transition-delay'
+date: '2024-3-7'
+tags: [css, effects, tips, ux/ui, tricks]
+---
+
+Intentional CSS :hover effects 🎈
+
+Add a small `transition-delay` so you know the `:hover` is intentional. See the difference below 🎞️
+
+```css
+a::after {
+  transition: scale 0.2s ease-in-out;
+}
+```
+
+vs.
+
+```css
+a::after {
+  transition: scale 0.2s 0.125s ease-in-out;
+}
+```
+
+Can be useful for some designs 🤙
+
+<video src="assets/intentional-hover-screencast.mp4" controls />
+
+[**CodePen**](https://codepen.io/jh3y/pen/poYxqjd)
+
+**ref**: https://twitter.com/jh3yy/status/1756827897573089383

@@ -1,0 +1,18 @@
+title: 'robertlewis.dev'
+description: 'My personal homepage & portfolio... This website!'
+image: 'https://raw.githubusercontent.com/robbylew/robertlewis.dev/master/public/new_preview.png'
+core_techs: ['typescript', 'reactjs', 'nextjs', 'tailwindcss', 'mdx']
+tags:
+  [
+    'typescript',
+    'reactjs',
+    'nextjs',
+    'tailwindcss',
+    'radix-ui',
+    'velite',
+    'kbar',
+    'phosphor-icons',
+    'mdx'
+  ]
+repository: 'https://github.com/robbylew/robertlewis.dev'
+website: 'https://robertlewis.dev/'

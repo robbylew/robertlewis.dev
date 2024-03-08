@@ -1,0 +1,56 @@
+@tailwind base;
+
+@layer base {
+  html {
+    @apply scrollbar-track-transparent scrollbar-thumb-neutral-700 scrollbar-thumb-rounded-lg;
+  }
+
+  * {
+    @apply scrollbar-thin;
+  }
+
+  body {
+    @apply bg-neutral-50 dark:bg-neutral-1000;
+    @apply font-sans text-neutral-900 dark:text-neutral-300;
+    @apply selection:bg-neutral-1000 selection:text-neutral-50 dark:selection:bg-neutral-50 dark:selection:text-neutral-1000;
+  }
+
+  /* Syntax Highlighting */
+  pre[data-theme='dark'] {
+    color-scheme: dark;
+  }
+
+  html.light {
+    code[data-theme*=' '],
+    code[data-theme*=' '] span {
+      color: var(--shiki-light);
+    }
+  }
+
+  html.dark {
+    code[data-theme*=' '],
+    code[data-theme*=' '] span {
+      color: var(--shiki-dark);
+    }
+  }
+}
+
+@layer base {
+  :root {
+    --email-color: 0 0% 9%;
+    --github-color: 0 1% 9%;
+    --codepen-color: 0 1% 9%;
+    --linkedin-color: 213 90% 41%;
+    --stack-overflow-color: 27 91% 56%;
+    --reddit-color: 16 100% 50%;
+    --twitter-color: 206 89% 53%;
+    --instagram-color: 351 75% 57%;
+    --arch-color: 200 80% 45%;
+  }
+
+  .dark {
+    --email-color: 0 0% 96%;
+    --github-color: 210 28% 94%;
+    --codepen-color: 210 28% 94%;
+  }
+}

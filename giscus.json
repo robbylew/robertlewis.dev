@@ -1,0 +1,7 @@
+{
+  "origins": ["https://www.robertlewis.dev", "https://robertlewis.dev"],
+  "originsRegex": [
+    "https://([A-z0-9]|-)*\\.robertlewis\\.dev",
+    "http://localhost:[0-9]+"
+  ]
+}
