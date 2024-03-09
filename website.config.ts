@@ -2,7 +2,7 @@ export const config = {
   metadata: {
     title: 'Robert Lewis',
     description:
-      'My internet hideout, here you will find some topics that I am learning and building, thoughts and tech blog posts, and know more about who I am...'
+      'Robert Lewis - Aspiring Software Developer specializing in modern web technologies. Check out my portfolio to see my projects and skills.'
   },
   webserver: {
     host: process.env.HOST ?? 'http://localhost:3000'

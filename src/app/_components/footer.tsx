@@ -34,7 +34,7 @@ export function Footer() {
             <ArrowIcon />
           </Link>
           <Link
-            href="https://github.com/robbylew/robertlewis.dev"
+            href="https://github.com/robbylew/robertlewis.dev/?ref=https://robertlewis.dev"
             rel="external"
           >
             <span>Github</span>
@@ -43,23 +43,38 @@ export function Footer() {
         </div>
         <div className="text-center text-sm text-neutral-400 dark:text-neutral-500 md:text-right">
           Handmade with{' '}
-          <Link href="https://nextjs.org/" rel="external">
+          <Link
+            href="https://nextjs.org/?ref=https://robertlewis.dev"
+            rel="external"
+          >
             Next.js
           </Link>
           ,{' '}
-          <Link href="https://mdxjs.com/" rel="external">
+          <Link
+            href="https://mdxjs.com/?ref=https://robertlewis.dev"
+            rel="external"
+          >
             MDX
           </Link>
           ,{' '}
-          <Link href="https://tailwindcss.com/" rel="external">
+          <Link
+            href="https://tailwindcss.com/?ref=https://robertlewis.dev"
+            rel="external"
+          >
             Tailwindcss
           </Link>{' '}
           and{' '}
-          <Link href="https://velite.js.org/" rel="external">
+          <Link
+            href="https://velite.js.org/?ref=https://robertlewis.dev"
+            rel="external"
+          >
             Velite
           </Link>{' '}
           by{' '}
-          <Link href="https://github.com/robbylew" rel="external">
+          <Link
+            href="https://github.com/robbylew/?ref=https://robertlewis.dev"
+            rel="external"
+          >
             Robert Lewis
           </Link>
           .

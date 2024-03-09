@@ -116,13 +116,13 @@ export function MobileMenu() {
                 title="License"
                 icon={File}
                 rel="license"
-                href="https://github.com/robbylew/robertlewis.dev/blob/master/LICENSE"
+                href="https://github.com/robbylew/robertlewis.dev/blob/master/LICENSE/?ref=https://robertlewis.dev"
               />
               <OutLink
                 title="Github"
                 icon={GithubLogo}
                 rel="external"
-                href="https://github.com/robbylew"
+                href="https://github.com/robbylew/?ref=https://robertlewis.dev"
               />
               <ToggleTheme />
             </div>

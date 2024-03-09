@@ -51,7 +51,7 @@ const contacts: Contact[] = [
       <div className="contact-line">
         <a
           className="inline-flex items-end gap-px hover:underline"
-          href="https://github.com/robbylew"
+          href="https://github.com/robbylew/?ref=https://robertlewis.dev"
           target="_blank"
           rel="external"
         >
@@ -75,7 +75,7 @@ const contacts: Contact[] = [
       <div className="contact-line">
         <a
           className="inline-flex items-end gap-px hover:underline"
-          href="https://www.linkedin.com/in/robbylewis/"
+          href="https://www.linkedin.com/in/robbylewis/?ref=https://robertlewis.dev"
           target="_blank"
           rel="external"
         >
@@ -99,7 +99,7 @@ const contacts: Contact[] = [
       <div className="contact-line">
         <a
           className="inline-flex items-end gap-px hover:underline"
-          href="https://www.instagram.com/robbylew"
+          href="https://www.instagram.com/robbylew/?ref=https://robertlewis.dev"
           target="_blank"
           rel="external"
         >
@@ -123,7 +123,7 @@ const contacts: Contact[] = [
       <div className="contact-line">
         <a
           className="inline-flex items-end gap-px hover:underline"
-          href="https://codepen.io/robbylew"
+          href="https://codepen.io/robbylew/?ref=https://robertlewis.dev"
           target="_blank"
           rel="external"
         >

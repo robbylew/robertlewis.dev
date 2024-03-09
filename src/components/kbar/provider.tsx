@@ -234,7 +234,7 @@ export function CustomKBarProvider({ children }: { children: ReactNode }) {
       icon: <File size="1em" weight="duotone" />,
       perform: () =>
         window.open(
-          'https://github.com/robbylew/robertlewis.dev/blob/main/LICENSE',
+          'https://github.com/robbylew/robertlewis.dev/blob/main/LICENSE/?ref=https://robertlewis.dev',
           '_blank'
         )
     },
