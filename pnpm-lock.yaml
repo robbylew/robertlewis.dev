@@ -8,9 +8,6 @@ dependencies:
   '@commitlint/types':
     specifier: ^18.4.3
     version: 18.6.1
-  '@giscus/react':
-    specifier: ^3.0.0
-    version: 3.0.0(react-dom@18.2.0)(react@18.2.0)
   '@headlessui/react':
     specifier: ^1.7.15
     version: 1.7.18(react-dom@18.2.0)(react@18.2.0)
@@ -949,17 +946,6 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@giscus/react@3.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-hgCjLpg3Wgh8VbTF5p8ZLcIHI74wvDk1VIFv12+eKhenNVUDjgwNg2B1aq/3puyHOad47u/ZSyqiMtohjy/OOA==}
-    peerDependencies:
-      react: ^16 || ^17 || ^18
-      react-dom: ^16 || ^17 || ^18
-    dependencies:
-      giscus: 1.5.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /@headlessui/react@1.7.18(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-4i5DOrzwN4qSgNsL4Si61VMkUcWbcSKueUV7sFhpHzQcSShdlHENE5+QBntMSRvHt8NyoFO2AGG8si9lq+w4zQ==}
     engines: {node: '>=10'}
@@ -1249,16 +1235,6 @@ packages:
   /@kwsites/promise-deferred@1.1.1:
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
     dev: true
-
-  /@lit-labs/ssr-dom-shim@1.2.0:
-    resolution: {integrity: sha512-yWJKmpGE6lUURKAaIltoPIE/wrbY3TEkqQt+X0m+7fQNnAv0keydnYvbiJFP1PnMhizmIWRWOG5KLhYyc/xl+g==}
-    dev: false
-
-  /@lit/reactive-element@2.0.4:
-    resolution: {integrity: sha512-GFn91inaUa2oHLak8awSIigYz0cU0Payr1rcFsrkf5OJ5eSPxElyZfKh0f2p9FsTiZWXQdWGJeXZICEfXXYSXQ==}
-    dependencies:
-      '@lit-labs/ssr-dom-shim': 1.2.0
-    dev: false
 
   /@mapbox/node-pre-gyp@1.0.11:
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
@@ -2036,10 +2012,6 @@ packages:
   /@types/shuffle-array@1.0.5:
     resolution: {integrity: sha512-mwqFRdqxNpraOhjjW/50Ejs7Z025pB7tnf/yM2tNZ6DRuZLGOd1UWX0u9a+aK+xBQFtLs7YStVpumGoNm2Ta/g==}
     dev: true
-
-  /@types/trusted-types@2.0.7:
-    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
-    dev: false
 
   /@types/unist@2.0.10:
     resolution: {integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==}
@@ -4324,12 +4296,6 @@ packages:
       resolve-pkg-maps: 1.0.0
     dev: true
 
-  /giscus@1.5.0:
-    resolution: {integrity: sha512-t3LL0qbSO3JXq3uyQeKpF5CegstGfKX/0gI6eDe1cmnI7D56R7j52yLdzw4pdKrg3VnufwCgCM3FDz7G1Qr6lg==}
-    dependencies:
-      lit: 3.1.2
-    dev: false
-
   /git-raw-commits@2.0.11:
     resolution: {integrity: sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A==}
     engines: {node: '>=10'}
@@ -5202,28 +5168,6 @@ packages:
 
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
-
-  /lit-element@4.0.4:
-    resolution: {integrity: sha512-98CvgulX6eCPs6TyAIQoJZBCQPo80rgXR+dVBs61cstJXqtI+USQZAbA4gFHh6L/mxBx9MrgPLHLsUgDUHAcCQ==}
-    dependencies:
-      '@lit-labs/ssr-dom-shim': 1.2.0
-      '@lit/reactive-element': 2.0.4
-      lit-html: 3.1.2
-    dev: false
-
-  /lit-html@3.1.2:
-    resolution: {integrity: sha512-3OBZSUrPnAHoKJ9AMjRL/m01YJxQMf+TMHanNtTHG68ubjnZxK0RFl102DPzsw4mWnHibfZIBJm3LWCZ/LmMvg==}
-    dependencies:
-      '@types/trusted-types': 2.0.7
-    dev: false
-
-  /lit@3.1.2:
-    resolution: {integrity: sha512-VZx5iAyMtX7CV4K8iTLdCkMaYZ7ipjJZ0JcSdJ0zIdGxxyurjIn7yuuSxNBD7QmjvcNJwr0JS4cAdAtsy7gZ6w==}
-    dependencies:
-      '@lit/reactive-element': 2.0.4
-      lit-element: 4.0.4
-      lit-html: 3.1.2
-    dev: false
 
   /locate-path@5.0.0:
     resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}

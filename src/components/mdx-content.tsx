@@ -13,5 +13,5 @@ const useMDXComponent = (code: string) => {
 
 export function MDXContent({ code, components }: MdxProps) {
   const Component = useMDXComponent(code)
-  return <Component components={{ Image, ...components }} />
+  return <Component components={{ Image, ...components }} /> // Include the Mermaid component in the components prop
 }

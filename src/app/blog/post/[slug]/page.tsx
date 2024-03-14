@@ -17,7 +17,6 @@ import { Post, posts } from '#content'
 
 import { slug } from '~/lib/slug'
 import { Date } from '~/components/date'
-import { GiscusComments } from '~/components/giscus-comments'
 import { MDXContent } from '~/components/mdx-content'
 
 import { TopButton } from './_components/top-button'
@@ -209,9 +208,6 @@ export default function Page({ params }: Props) {
           </nav>
         )}
         <MDXContent code={post.content} components={mdxComponents} />
-      </div>
-      <div className="pt-12">
-        <GiscusComments />
       </div>
       <TopButton />
     </div>
