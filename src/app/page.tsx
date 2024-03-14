@@ -19,9 +19,10 @@ export default function Page() {
           <span className="flex items-center text-2xl text-neutral-400 md:text-3xl ">
             <Typewriter
               words={[
-                'Full Stack Engineer',
                 'Machine Learning Enthusiast',
-                'Aspiring Cybersecurity Expert'
+                'Full Stack Engineer',
+                'Aspiring Cybersecurity Expert',
+                'Open Source Contributor'
               ]}
               cursor
               loop={true}

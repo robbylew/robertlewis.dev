@@ -24,7 +24,7 @@ export function StartButton() {
     >
       <span className="hidden md:inline">Press</span>
       <kbd className="keyboard hidden tracking-normal opacity-90 md:inline">
-        {os === 'MacOS' ? '⌘ K' : os === 'Windows' ? '⌃ K' : ''}
+        {os === 'MacOS' ? '⌘ K' : os === 'Windows' ? 'CTRL K' : ''}
       </kbd>
       <span className="inline md:hidden">Click</span>
       <span>to start</span>
