@@ -1,12 +1,20 @@
 'use client'
 
 import { useKBar } from 'kbar'
+import { useEffect, useState } from 'react'
 import { ArrowRight } from '@phosphor-icons/react/dist/ssr'
 
 export function StartButton() {
   const {
     query: { toggle }
   } = useKBar()
+
+  const [os, setOS] = useState('')
+
+  useEffect(() => {
+    const platform = window.navigator.platform
+    platform.indexOf('Mac') !== -1 ? setOS('MacOS') : setOS('Windows')
+  }, [])
 
   return (
     <button
@@ -16,7 +24,7 @@ export function StartButton() {
     >
       <span className="hidden md:inline">Press</span>
       <kbd className="keyboard hidden tracking-normal opacity-90 md:inline">
-        Ctrl K
+        {os === 'MacOS' ? '⌘ K' : os === 'Windows' ? '⌃ K' : ''}
       </kbd>
       <span className="inline md:hidden">Click</span>
       <span>to start</span>
