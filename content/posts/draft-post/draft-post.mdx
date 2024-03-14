@@ -9,469 +9,207 @@ author: 'Robert Lewis'
 test: true
 ---
 
-# Title 1
+# Heading Level 1
 
-## Title 2
+## Heading Level 2
 
-### Title 3
+### Heading Level 3
 
-#### Title 4
+#### Heading Level 4
 
-# HTML Tests
+# HTML Elements Test
 
-## Common Tags
+## Common HTML Tags
 
-<h1> Title with HTML </h1>
+<h1>HTML Heading</h1>
 
-<p>tag p</p>
+<p>This is a paragraph.</p>
 
-<div>content in a simple div</div>
+<div>A simple div.</div>
 
-<div align="center">content in a div with align center</div>
-
-## Iframe
+## Iframe Example
 
 <iframe
   width="560"
   height="315"
-  src="https://www.youtube.com/embed/ms1iTZzAutY"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
   allowfullscreen
 ></iframe>
 
-## Video
+## Video Embedding
 
 <video src="assets/intentional-hover-screencast.mp4" controls />
 
-## Image
+## Image Embedding
 
-### Width 100px
+### Fixed Widths
 
-<img src="assets/bem+vindo+ao+mundo+das+gambiarras+sacanas.gif" width="100" />
+<img src="assets/Hannah.png" width="100" />
 
-### Width 300px
+<img src="assets/Hannah.png" width="300" />
 
-<img src="assets/bem+vindo+ao+mundo+das+gambiarras+sacanas.gif" width="300" />
+<img src="assets/Hannah.png" width="560" />
 
-### Width 560px
+<img src="assets/Hannah.png" width="1000" />
 
-<img src="assets/bem+vindo+ao+mundo+das+gambiarras+sacanas.gif" width="560" />
+<img src="assets/Hannah.png" width="2000" />
 
-### Width 1000px
+# Text Formatting
 
-<img src="assets/bem+vindo+ao+mundo+das+gambiarras+sacanas.gif" width="1000" />
+Regular text
+**Bold text**
+_Italic text_
+~~Strikethrough text~~
 
-### Width 2000px
+# Images with Alt Text
 
-<img src="assets/bem+vindo+ao+mundo+das+gambiarras+sacanas.gif" width="2000" />
+![Hannah Banana](assets/Hannah.png)
 
-# Formating
+# Code Snippets
 
-normal
-**bold**
-_italics_
-~~scratched~~
+## Inline Code
 
-# Image
+Without highlight: `const x = 10;`
 
-## Alt text
-
-![alt image text](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.steves-digicams.com%2Fblog%2Fwp-content%2Fuploads%2F2017%2F10%2FNikon_D850_Sample_13.jpg&f=1&nofb=1)
-
-# Code
-
-## Inline
-
-Without hightlight: `inline code`
-
-Inline Rust: `fn factorial(i: u64) -> u64 {:rust}`
+With Rust highlight: `let x: i32 = 10; {:rust}`
 
 &nbsp;
 
-## Block
+## Code Blocks
 
-elixir (highlight /x = Foo.bar 0/)
+### Elixir Highlighting
 
-```elixir /x = Foo.bar 0/
-defmodule Foo do
-  def bar(x), when x == 0, do: x+1 end
-  def bar(x) do
-    x + 2
+```elixir
+defmodule Example do
+  def add(a, b) do
+    a + b
   end
 end
-
-x = Foo.bar 0
-y = Foo.bar 1
-
-^y = x + 1
 ```
 
-js with Highlighted Chars By Id (/age/#r /name/#r /setAge/#g /setName/#g /50/#b /"Taylor"/#b)
+### JavaScript with Highlighting
 
-```js /age/#r /name/#r /setAge/#g /setName/#g /50/#b /"Taylor"/#b
-const [age, setAge] = useState(50)
-const [name, setName] = useState('Taylor')
+```javascript
+function add(a, b) {
+  return a + b
+}
 ```
 
-sql
+### SQL
 
 ```sql
-SELECT * FROM my_table;
+SELECT * FROM users;
 ```
 
-bash
+### Bash Script
 
 ```bash
 #!/bin/bash
-
-var1=$1
-
-if [ $var1 -gt 5 ]; do
-  echo "Is greather than 5"
-fi
+echo "Hello, World!"
 ```
 
-python (highlight \{1\-3\,5\})
+### Python with Line Numbers
 
-```python {1-3,5}
-def foo(x):
-  return x + 1
+```python showLineNumbers
+def add(a, b):
+    return a + b
 
-def bar(y):
-  return y + 1
-
-x = foo(1)
-y = bar(1)
+result = add(2, 3)
 ```
 
-python (highlight \{1\-3\,5\} and line-numbers)
+### Complete Features in Rust
 
-```python showLineNumbers {1-3,5}
-def foo(x):
-  return x + 1
-
-def bar(y):
-  return y + 1
-
-x = foo(1)
-y = bar(1)
-```
-
-Javascript
-
-```javascript
-function foo(x) {
-  return x + 1
-}
-
-function bar(y) {
-  return y + 1
-}
-
-const x = foo(1)
-const y = bar(1)
-```
-
-Typescript (show line numbers)
-
-```typescript showLineNumbers
-function foo(x: number): number {
-  return x + 1
-}
-
-const sum: (x: number) => number = foo
-const y: number = sum(1)
-```
-
-Rust
-
-```rust title="Simple Rust code with title"
-fn factorial(i: u64) -> u64 {
-  match i {
-    0 => 1,
-    n => n * factorial(n-1)
-  }
+```rust showLineNumbers title="main.rs" caption="A simple Rust program for addition"
+fn add(a: i32, b: i32) -> i32 {
+  a + b
 }
 
 fn main() {
-  println!("Hello World");
+  let result = add(2, 3);
+  println!("The result is {}", result);
 }
 ```
 
-_another_ Rust,_but with caption_
+# Markdown Tables
 
-```rust caption="This is a caption with some note about the code"
-fn factorial(i: u64) -> u64 {
-  match i {
-    0 => 1,
-    n => n * factorial(n-1)
-  }
-}
+## Simple Table
 
-fn main() {
-  println!("Hello World");
-}
-```
+| Header One | Header Two |
+| ---------- | ---------- |
+| Cell One   | Cell Two   |
+| Cell Three | Cell Four  |
 
-Go Lang
-
-```go
-// ZeroBroadcast reports whether addr is 255.255.255.255.
-func (addr ipv4addr) ZeroBroadcast() bool {
-  return addr == 0xFFFFFFFF
-}
-```
-
-Rust complete code features
-
-```rust showLineNumbers title="src/main.rs" caption="the code above return the factorial of an given number" /factorial(n-1)/ {9}
-fn factorial(i: u64) -> u64 {
-  match i {
-    0 => 1,
-    n => n * factorial(n-1)
-  }
-}
-
-fn main() {
-  println!("Hello World");
-}
-```
-
-Long Block Quote
-
-```text
-sdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgf
-sdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgfsdasdaskjdfhsdakjasjkfdfkjghsdfkjhdsgfdshgdshgfhjdsfghdsfgkhsdghjghsdgfhsadgfkhgsfkhgsfhgsajhfgajsfghasdgf
-```
-
-# Tables
-
-## Md
-
-### Tipo 1
-
-```markdown
-| A   | B   | C   |
-| --- | --- | --- |
-| a1  | b1  | c1  |
-| a2  | b1  | c2  |
-```
-
-| A   | B   | C   |
-| --- | --- | --- |
-| a1  | b1  | c1  |
-| a2  | b1  | c2  |
-
-### Tipo 2
-
-```markdown
-| A   | B   | C   |
-| --- | --- | --- |
-| a1  | b1  | c1  |
-| --- | --- | --- |
-| a2  | b1  | c2  |
-| --- | --- | --- |
-```
-
-| A   | B   | C   |
-| --- | --- | --- |
-| a1  | b1  | c1  |
-| --- | --- | --- |
-| a2  | b1  | c2  |
-| --- | --- | --- |
-
-### Tipo 3
-
-```markdown
-| A   | B   | C   |
-| --- | --- | --- |
-| a1  | b1  | c1  |
-| a2  | b1  | c2  |
-```
-
-| A   | B   | C   |
-| --- | --- | --- |
-| a1  | b1  | c1  |
-| a2  | b1  | c2  |
-
-### Tipo 4
-
-```markdown
-| foo | bar |
-| :-- | :-: |
-| baz | qux |
-```
-
-| foo | bar |
-| :-- | :-: |
-| baz | qux |
-
-## Html
+## HTML Table
 
 ```html
 <table>
   <tr>
-    <th>Test 1</th>
-    <th>Test 2</th>
+    <th>Column 1</th>
+    <th>Column 2</th>
   </tr>
   <tr>
-    <td>Test 3</td>
-    <td>Test 4</td>
-  </tr>
-  <tr>
-    <td>Test 5</td>
-    <td>Test 6</td>
+    <td>Data 1</td>
+    <td>Data 2</td>
   </tr>
 </table>
 ```
 
-<table>
-  <tr>
-    <th>Test 1</th>
-    <th>Test 2</th>
-  </tr>
-  <tr>
-    <td>Test 3</td>
-    <td>Test 4</td>
-  </tr>
-  <tr>
-    <td>Test 5</td>
-    <td>Test 6</td>
-  </tr>
-</table>
+# Task Lists
 
-# Tasks
-
-- [x] task 1
-- [x] task 2
-- [ ] task 3
-- [ ] task 4
+- [x] Completed task
+- [ ] Incomplete task
 
 # Lists
 
-## Unordered
+## Unordered List
 
-- item 1
-- item 2
-- item 3
-- `item 4`
-- `item 5`
-- item 6
-  - item 6.1
-  - item 6.2
-    - item 6.2.1
-  - item 6.3
-- item 7
-- **Long item 8:** Ex elit id do ea do voluptate incididunt. Excepteur sit sit veniam in nulla Lorem sunt elit non proident nostrud qui do consectetur. Officia deserunt labore sit amet ad culpa velit magna. Cupidatat culpa pariatur incididunt minim aliquip exercitation officia incididunt mollit nostrud ad. Ea officia nisi laboris Lorem. Lorem incididunt culpa occaecat sint Lorem aliquip nisi.
-- **Long item 9:** Ex elit id do ea do voluptate incididunt. Excepteur sit sit veniam in nulla Lorem sunt elit non proident nostrud qui do consectetur. Officia deserunt labore sit amet ad culpa velit magna. Cupidatat culpa pariatur incididunt minim aliquip exercitation officia incididunt mollit nostrud ad. Ea officia nisi laboris Lorem. Lorem incididunt culpa occaecat sint Lorem aliquip nisi.
+- Item one
+- Item two
+  - Subitem one
+  - Subitem two
 
-## Ordered
+## Ordered List
 
-1. Mateus
-2. Felipe
-3. Gonçalves
-4. Laboris tempor magna nulla mollit esse mollit cillum commodo ad eu veniam ullamco irure. Nulla non ullamco minim minim eu ad et fugiat aliquip excepteur Lorem labore amet ex. Eu ea in ipsum ullamco dolor excepteur fugiat commodo esse. Ex ad velit do dolore excepteur officia irure. Nisi sunt consectetur minim occaecat culpa enim minim incididunt fugiat aliqua sint. Est ipsum ullamco veniam ut non cillum minim consequat aliquip mollit commodo mollit sunt. Ex velit laboris laboris excepteur irure culpa id Lorem sit occaecat laboris voluptate.
-5. Laboris tempor magna nulla mollit esse mollit cillum commodo ad eu veniam ullamco irure. Nulla non ullamco minim minim eu ad et fugiat aliquip excepteur Lorem labore amet ex. Eu ea in ipsum ullamco dolor excepteur fugiat commodo esse. Ex ad velit do dolore excepteur officia irure. Nisi sunt consectetur minim occaecat culpa enim minim incididunt fugiat aliqua sint. Est ipsum ullamco veniam ut non cillum minim consequat aliquip mollit commodo mollit sunt. Ex velit laboris laboris excepteur irure culpa id Lorem sit occaecat laboris voluptate.
-6. Laboris tempor magna nulla mollit esse mollit cillum commodo ad eu veniam ullamco irure. Nulla non ullamco minim minim eu ad et fugiat aliquip excepteur Lorem labore amet ex. Eu ea in ipsum ullamco dolor excepteur fugiat commodo esse. Ex ad velit do dolore excepteur officia irure. Nisi sunt consectetur minim occaecat culpa enim minim incididunt fugiat aliqua sint. Est ipsum ullamco veniam ut non cillum minim consequat aliquip mollit commodo mollit sunt. Ex velit laboris laboris excepteur irure culpa id Lorem sit occaecat laboris voluptate.
+1. First item
+2. Second item
+3. Third item
 
-# Hints
+# Custom Components (Assuming support)
 
-<Tip>
-This is a tip.
-_A cheat for your life_
+<Tip>This is a helpful tip.</Tip>
 
-[Just a link](#hints)
+<Warn>A caution for readers.</Warn>
 
-</Tip>
+<Error>An error or important notice.</Error>
 
-<Warn>
-This is a warning...
-~Be careful.~
+# Mathematical Equations
 
-[Just a link](#hints)
+Inline equation: $E = mc^2$
 
-</Warn>
-
-<Error>
-This is a error!!
-Pay **attention**!
-
-[Just a link](#hints)
-
-</Error>
-
-<Tip>
-  **LONG TIP** _Nisi est dolore magna laboris esse quis tempor laborum quis
-  ipsum pariatur amet fugiat ipsum. Ad veniam qui enim nisi ut reprehenderit
-  duis anim eu. Ex proident fugiat non duis consequat et officia et exercitation
-  culpa reprehenderit eiusmod._
-</Tip>
-<Warn>
-  **LONG WARNING** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec metus augue.
-                     Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                     Suspendisse eu turpis non sem congue maximus nec tincidunt nisl. Nullam fermentum velit nibh,
-                     id fringilla nunc gravida et. Suspendisse vestibulum nunc est, non ornare mi fermentum sed.
-                      Donec luctus ultrices nisl. In odio enim, facilisis vel justo non, efficitur feugiat ante.
-</Warn>
-<Error>
-  **LONG ERROR** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec metus augue.
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-  Suspendisse eu turpis non sem congue maximus nec tincidunt nisl. Nullam fermentum velit nibh,
-  id fringilla nunc gravida et. Suspendisse vestibulum nunc est, non ornare mi fermentum sed.
-   Donec luctus ultrices nisl. In odio enim, facilisis vel justo non, efficitur feugiat ante.
-</Error>
-
-<Tip>One line small Tip</Tip>
-<Warn>One line small Warn</Warn>
-<Error>One line small Error</Error>
-
-# Math
-
-block
+Block equation:
 
 $$
-f(x) = \int_{-\infty}^\infty
-    f\hat\xi\,e^{2 \pi i \xi x}
-    \,d\xi
+E = mc^2
 $$
-
-inline math: $ x+1 = 2 $
 
 # Blockquote
 
-> This is a blockquote
+> "To be, or not to be, that is the question."
 
-> **LONG BLOCKQUOTE** _Nisi est dolore magna laboris esse quis tempor laborum quis ipsum pariatur amet fugiat ipsum. Ad veniam qui enim nisi ut reprehenderit duis anim eu. Ex proident fugiat non duis consequat et officia et exercitation culpa reprehenderit eiusmod._
-
-# Separation
+# Horizontal Rule
 
 ---
 
-foo
+# Footnotes
 
-# Footnote
+Text with a footnote.[^1]
 
-Sample footnote [^1], sample another footnote [^another]
+[^1]: This is the footnote.
 
-[^1]: Just a footnote
-[^another]: Just one more footnote
 
-# Variables
+# Conclusion
 
-## Text
-
-[var]: This text was inside a variable
-
-Text: [var]
-
-## Image
-
-[image]: assets/bem+vindo+ao+mundo+das+gambiarras+sacanas.gif
-
-![image with sample image][image]
-
-# References
-
-Google: [_google.com_](https://google.com)
+This concludes the draft post for testing MDX capabilities, covering a wide range of markdown, HTML, and custom MDX components for comprehensive testing.

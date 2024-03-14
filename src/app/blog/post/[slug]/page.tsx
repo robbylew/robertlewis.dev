@@ -37,14 +37,14 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title: post.title,
     description: post.description,
-    authors: { name: 'Mateus Felipe Gonçalves', url: 'https://mateusf.com' },
+    authors: { name: 'Robert Lewis', url: 'https://robertlewis.dev' },
     keywords: post.tags,
-    publisher: 'Mateus Felipe Gonçalves <contact@mateusf.com>',
+    publisher: 'Robert Lewis <contact@robertlewis.dev>',
     openGraph: {
       title: post.title,
       description: post.description,
       tags: post.tags,
-      authors: 'Mateus Felipe Gonçalves <contact@mateusf.com>',
+      authors: 'Robert Lewis <contact@mrobertlewis.dev>',
       type: 'article',
       url: `/blog/post/${params.slug}`,
       images: {
@@ -57,7 +57,7 @@ export function generateMetadata({ params }: Props): Metadata {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      creator: 'Mateus Felipe Gonçalves <contact@mateusf.com>',
+      creator: 'Robert Lewis <contact@robertlewis.dev>',
       site: '/',
       images: {
         url: `/blog/post/${post.slug}/thumbnail`,
