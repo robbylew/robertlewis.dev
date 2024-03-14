@@ -14,7 +14,7 @@ export default function Page() {
       <div className="flex w-full items-center justify-center gap-12 md:justify-between">
         <div className="flex flex-col gap-4">
           <span className="w-min text-7xl font-bold text-black dark:text-neutral-50 md:w-max">
-            Robert Lewis,
+            Robert Lewis
           </span>
           <span className="flex items-center text-2xl text-neutral-400 md:text-3xl ">
             <Typewriter
