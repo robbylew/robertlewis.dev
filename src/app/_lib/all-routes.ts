@@ -12,8 +12,7 @@ const commonPaths = [
   'blog',
   'blog/categories',
   'blog/tag',
-  'blog/feed',
-  'guestbook'
+  'blog/feed'
 ]
 const tagPaths = getUniqueTagListFromPosts().map(tag => `blog/tag/${slug(tag)}`)
 const categoryPaths = getUniqueCategoryList().map(

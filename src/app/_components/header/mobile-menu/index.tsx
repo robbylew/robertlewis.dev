@@ -14,7 +14,6 @@ import {
   Note,
   User,
   Briefcase,
-  Book,
   Notebook
 } from '@phosphor-icons/react/dist/ssr'
 
@@ -110,7 +109,6 @@ export function MobileMenu() {
               <Link title="TIL" icon={Notebook} href="/blog/til" />
               <Link title="Projects" icon={Briefcase} href="/projects" />
               <Link title="About" icon={User} href="/about" />
-              <Link title="Guestbook" icon={Book} href="/guestbook" />
               <Search />
               <OutLink
                 title="License"

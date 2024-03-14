@@ -25,8 +25,7 @@ import {
   ChartLine,
   User,
   SquaresFour,
-  Notebook,
-  Book
+  Notebook
 } from '@phosphor-icons/react/dist/ssr'
 import { getSortedPosts } from '~/lib/get-sorted-posts'
 import { KBar } from '~/components/kbar'
@@ -61,14 +60,6 @@ export function CustomKBarProvider({ children }: { children: ReactNode }) {
       keywords: 'about me user information info',
       icon: <User size="1em" weight="duotone" />,
       perform: () => push('/about')
-    },
-    {
-      id: 'guestbook',
-      name: 'Guestbook',
-      shortcut: !isMobileDevice() ? ['n', 'g'] : undefined,
-      keywords: 'presence list',
-      icon: <Book size="1em" weight="duotone" />,
-      perform: () => push('/guestbook')
     }
   ]
 

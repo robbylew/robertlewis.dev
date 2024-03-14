@@ -76,7 +76,6 @@ export function Header() {
             <MenuItem name="TIL" path="/blog/til" />
             <MenuItem name="Projects" path="/projects" />
             <MenuItem name="About" path="/about" />
-            <MenuItem name="Guestbook" path="/guestbook" />
           </nav>
           <div className="flex w-full items-center gap-8 md:w-auto">
             <Search />
