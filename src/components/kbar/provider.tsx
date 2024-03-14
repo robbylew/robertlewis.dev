@@ -212,7 +212,7 @@ export function CustomKBarProvider({ children }: { children: ReactNode }) {
       id: 'out-repo',
       name: 'Source code',
       section: 'Website',
-      keywords: 'repo source github código fonte',
+      keywords: 'repo source github',
       icon: <GithubLogo size="1em" weight="duotone" />,
       perform: () =>
         window.open('https://github.com/robbylew/robertlewis.dev', '_blank')
