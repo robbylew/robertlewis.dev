@@ -7,8 +7,12 @@ import {
   CalendarBlank,
   Clock,
   Tag,
-  TextAlignLeft
+  TextAlignLeft,
+  Lightbulb,
+  Warning,
+  WarningOctagon
 } from '@phosphor-icons/react/dist/ssr'
+import { BiSolidQuoteAltRight } from 'react-icons/bi'
 import { Post, posts } from '#content'
 
 import { slug } from '~/lib/slug'
@@ -34,14 +38,14 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title: post.title,
     description: post.description,
-    authors: { name: 'Robert Lewis', url: 'https://robertlewis.dev' },
+    authors: { name: 'Mateus Felipe Gonçalves', url: 'https://mateusf.com' },
     keywords: post.tags,
-    publisher: 'Robert Lewis <contact@robertlewis.dev>',
+    publisher: 'Mateus Felipe Gonçalves <contact@mateusf.com>',
     openGraph: {
       title: post.title,
       description: post.description,
       tags: post.tags,
-      authors: 'Robert Lewis <contact@robertlewis.dev>',
+      authors: 'Mateus Felipe Gonçalves <contact@mateusf.com>',
       type: 'article',
       url: `/blog/post/${params.slug}`,
       images: {
@@ -54,7 +58,7 @@ export function generateMetadata({ params }: Props): Metadata {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      creator: 'Robert Lewis <contact@robertlewis.dev>',
+      creator: 'Mateus Felipe Gonçalves <contact@mateusf.com>',
       site: '/',
       images: {
         url: `/blog/post/${post.slug}/thumbnail`,
@@ -76,7 +80,39 @@ const mdxComponents = {
         {children}
       </a>
     ),
-  figure: PrettyCodeElement
+  figure: PrettyCodeElement,
+  Tip: ({ children, ...rest }: ComponentProps<'div'>) => (
+    <div {...rest} className="hint tip">
+      <span className="icon">
+        <Lightbulb size="1em" />
+      </span>
+      {children}
+    </div>
+  ),
+  Warn: ({ children, ...rest }: ComponentProps<'div'>) => (
+    <div {...rest} className="hint warn">
+      <span className="icon">
+        <Warning size="1em" />
+      </span>
+      {children}
+    </div>
+  ),
+  Error: ({ children, ...rest }: ComponentProps<'div'>) => (
+    <div {...rest} className="hint error">
+      <span className="icon">
+        <WarningOctagon size="1em" />
+      </span>
+      {children}
+    </div>
+  ),
+  blockquote: ({ children, ...rest }: ComponentProps<'blockquote'>) => (
+    <blockquote {...rest}>
+      <span className="icon">
+        <BiSolidQuoteAltRight size="1em" />
+      </span>
+      {children}
+    </blockquote>
+  )
 }
 
 const exampleToc = posts[0].toc[0]
@@ -86,8 +122,8 @@ const TocItem = ({
   ...rest
 }: { toc: TocEntry } & ComponentProps<'li'>) => (
   <li {...rest}>
-    {toc && toc.url && <a href={toc.url}>{toc.title}</a>}
-    {toc && toc.items && toc.items.length > 0 && (
+    <a href={toc.url}>{toc.title}</a>
+    {toc.items.length > 0 && (
       <ol className="space-y-2">
         {toc.items.map(childToc => (
           <TocItem
@@ -183,15 +219,9 @@ export default function Page({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-  if (!Array.isArray(posts)) {
-    return []
-  }
-
   return posts
     .filter(post => post.status !== 'planned')
     .map(post => ({
-      params: {
-        slug: post.slug
-      }
+      slug: post.slug
     }))
 }

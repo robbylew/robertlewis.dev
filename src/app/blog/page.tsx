@@ -39,44 +39,11 @@ const TopLink = ({ Icon, title, ...rest }: TopLinkProps) => (
   </Link>
 )
 
-type OverlayProps = {
-  message: string
-}
-
-const Overlay: React.FC<OverlayProps> = ({ message }) => (
-  <div
-    style={{
-      position: 'fixed',
-      top: '60px', // Set this to the height of your header
-      left: 0,
-      width: '100%',
-      height: '100%', // Subtract the height of the header
-      zIndex: 40,
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      color: 'white',
-      fontSize: '1.5em',
-      fontWeight: 'bold',
-      padding: '20px',
-      boxSizing: 'border-box'
-    }}
-  >
-    <div>
-      <p>{message}</p>
-      <p>Check back soon!</p>
-    </div>
-  </div>
-)
-
 export default function Page() {
   const sortedPosts = getSortedPosts(posts)
 
   return (
     <div className="content-container m-auto">
-      <Overlay message="Work in Progress" />
       <Title text="Blog" />
       <div className="flex flex-wrap justify-center gap-4 py-4 md:justify-start">
         <TopLink Icon={FolderOpen} href="/blog/categories" title="Categories" />
