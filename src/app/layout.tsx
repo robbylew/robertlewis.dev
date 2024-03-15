@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     emails: ['contact@robertlewis.dev'],
     images: [
       {
-        url: 'https://robertlewis.dev/api/static', // Add the og:image property here
-        alt: 'Description of the image'
+        url: 'https://robertlewis.dev/api/og', // Add the og:image property here
+        alt: 'Robert Lewis's Portfolio'
       }
     ]
   },
