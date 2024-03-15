@@ -40,7 +40,13 @@ export const metadata: Metadata = {
     siteName: config.metadata.title,
     type: 'website',
     url: '/',
-    emails: ['contact@robertlewis.dev']
+    emails: ['contact@robertlewis.dev'],
+    images: [
+      {
+        url: 'https://robertlewis.dev/api/static', // Add the og:image property here
+        alt: 'Description of the image'
+      }
+    ]
   },
   twitter: {
     ...config.metadata,
