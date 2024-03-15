@@ -6,6 +6,14 @@ import { Contact } from './sections/contact'
 import './styles.css'
 
 export const metadata: Metadata = {
+  openGraph: {
+    images: [
+      {
+        url: '/assets/aboutPreview.png',
+        alt: 'Robert Lewis Selfie'
+      }
+    ]
+  },
   title: 'About Me',
   description:
     'Information about me, my social links and knowledge. I am a software engineer and I love to share my knowledge with others.',
