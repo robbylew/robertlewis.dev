@@ -21,7 +21,7 @@ export async function GET() {
         }}
       >
         <div style={{ fontSize: '80px' }}>👋</div>
-        <div>Robert Lewis's Portfolio</div>
+        <div>Robert Lewis&apos;s Portfolio</div> {/* Replace ' with &apos; */}
       </div>
     ),
     {
