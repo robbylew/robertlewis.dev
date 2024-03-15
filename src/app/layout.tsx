@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://robertlewis.dev/api/og', // Add the og:image property here
-        alt: 'Robert Lewis's Portfolio'
+        alt: 'Robert Lewis Portfolio'
       }
     ]
   },
