@@ -1,62 +1,67 @@
 import { ImageResponse } from 'next/og'
+// App router includes @vercel/og.
+// No need to install it.
 
 export const runtime = 'edge'
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
-    const { searchParams } = new URL(request.url)
-
-    // ?title=<title>
-    const hasTitle = searchParams.has('title')
-    const title = hasTitle
-      ? searchParams.get('title')?.slice(0, 100)
-      : 'Robert Lewis Portfolio'
-
     return new ImageResponse(
       (
         <div
           style={{
-            backgroundColor: 'black',
-            backgroundSize: '150px 150px',
+            display: 'flex',
             height: '100%',
             width: '100%',
-            display: 'flex',
-            textAlign: 'center',
             alignItems: 'center',
             justifyContent: 'center',
-            flexDirection: 'column',
-            flexWrap: 'nowrap'
+            letterSpacing: '-.02em',
+            fontWeight: 700,
+            background: 'white'
           }}
         >
           <div
             style={{
+              left: 42,
+              top: 42,
+              position: 'absolute',
               display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              justifyItems: 'center'
+              alignItems: 'center'
             }}
           >
-            <img
-              alt="Vercel"
-              height={200}
-              src="data:image/svg+xml,%3Csvg width='116' height='100' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M57.5 0L115 100H0L57.5 0z' /%3E%3C/svg%3E"
-              style={{ margin: '0 30px' }}
-              width={232}
+            <span
+              style={{
+                width: 24,
+                height: 24,
+                background: 'black'
+              }}
             />
+            <span
+              style={{
+                marginLeft: 8,
+                fontSize: 20
+              }}
+            >
+              robertlewis.dev
+            </span>
           </div>
           <div
             style={{
-              fontSize: 60,
-              fontStyle: 'normal',
-              letterSpacing: '-0.025em',
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              padding: '20px 50px',
+              margin: '0 42px',
+              fontSize: 45,
+              width: 'auto',
+              maxWidth: 550,
+              textAlign: 'center',
+              backgroundColor: 'black',
               color: 'white',
-              marginTop: 30,
-              padding: '0 120px',
-              lineHeight: 1.4,
-              whiteSpace: 'pre-wrap'
+              lineHeight: 1.4
             }}
           >
-            {title}
+            Robert Lewis
           </div>
         </div>
       ),
