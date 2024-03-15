@@ -3,12 +3,13 @@
 import Image from 'next/image'
 import Tilt from 'react-parallax-tilt'
 import { placeholder } from '../../../lib/placeholder'
+import pic from 'public/assets/Robert-Lewis.jpeg'
 
 export function ImageCard({ mobile = false }) {
   if (mobile) {
     return (
       <Image
-        src="https://github.com/robbylew.png"
+        src={pic}
         height={460}
         width={460}
         alt="Robert Lewis's picture"
@@ -34,7 +35,7 @@ export function ImageCard({ mobile = false }) {
       tiltReverse
     >
       <Image
-        src="https://github.com/robbylew.png"
+        src={pic}
         height={460}
         width={460}
         alt="Robert Lewis's picture"
