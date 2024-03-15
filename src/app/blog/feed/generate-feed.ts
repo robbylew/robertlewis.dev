@@ -19,7 +19,7 @@ export function generateFeed() {
       'This is my "corner of internet", where I take some tests, document my studies and write about some subjects I like...',
     id: config.webserver.host,
     link: config.webserver.host,
-    favicon: `${config.webserver.host}/assets/brain.png`,
+    favicon: `${config.webserver.host}/assets/icon.png`,
     copyright: `All rights reserved ${date.getFullYear()}, Robert Lewis.`,
     updated: posts.length > 0 ? new Date(posts[0].date) : date,
     feedLinks: {
